@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/splashFragment">
+    <fragment
+        android:id="@+id/discoverFragment"
+        android:name="com.easycodingg.imagesearchapp.ui.fragments.DiscoverFragment"
+        android:label="DiscoverFragment" >
+        <action
+            android:id="@+id/action_discoverFragment_to_imageFragment"
+            app:destination="@id/imageFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/searchFragment"
+        android:name="com.easycodingg.imagesearchapp.ui.fragments.SearchFragment"
+        android:label="SearchFragment" >
+        <action
+            android:id="@+id/action_searchFragment_to_imageFragment"
+            app:destination="@id/imageFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/likedFragment"
+        android:name="com.easycodingg.imagesearchapp.ui.fragments.LikedFragment"
+        android:label="LikedFragment" >
+        <action
+            android:id="@+id/action_likedFragment_to_imageFragment"
+            app:destination="@id/imageFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/imageFragment"
+        android:name="com.easycodingg.imagesearchapp.ui.fragments.ImageFragment"
+        android:label="ImageFragment" >
+        <action
+            android:id="@+id/action_imageFragment_to_userProfileFragment"
+            app:destination="@id/userProfileFragment" />
+        <argument
+            android:name="UnsplashPhoto"
+            app:argType="com.easycodingg.imagesearchapp.model.photoobject.UnsplashPhoto" />
+    </fragment>
+    <fragment
+        android:id="@+id/userProfileFragment"
+        android:name="com.easycodingg.imagesearchapp.ui.fragments.UserProfileFragment"
+        android:label="UserProfileFragment" >
+        <argument
+            android:name="profile_url"
+            app:argType="string" />
+    </fragment>
+    <fragment
+        android:id="@+id/splashFragment"
+        android:name="com.easycodingg.imagesearchapp.ui.fragments.SplashFragment"
+        android:label="SplashFragment" >
+        <action
+            android:id="@+id/action_splashFragment_to_discoverFragment"
+            app:destination="@id/discoverFragment" />
+    </fragment>
+</navigation>

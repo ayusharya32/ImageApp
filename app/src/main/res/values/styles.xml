@@ -1,0 +1,30 @@
+<resources>
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.MaterialComponents.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
+
+    <style name="myActionBarSearchViewStyle" parent="ThemeOverlay.AppCompat.ActionBar">
+        <item name="autoCompleteTextViewStyle">@style/Widget.MyApp.AutoCompleteTextView.SearchView</item>
+        <item name="searchViewStyle">@style/mySearchViewStyle</item>
+    </style>
+
+    <style name="mySearchViewStyle" parent="Widget.AppCompat.SearchView">
+        <item name="searchHintIcon">@null</item>
+        <item name="closeIcon">@drawable/ic_action_close</item>
+    </style>
+
+    <style name="Widget.MyApp.AutoCompleteTextView.SearchView" parent="Widget.AppCompat.AutoCompleteTextView">
+        <item name="android:textColor">#fff</item>
+        <item name="android:textColorHint">#d8d3cd</item>
+    </style>
+
+    <style name="circleImageView" parent="">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSize">50%</item>
+    </style>
+
+</resources>

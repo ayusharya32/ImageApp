@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">Image Search App</string>
+    <string-array name="sort_options">
+        <item>Latest</item>
+        <item>Popular</item>
+        <item>Oldest</item>
+    </string-array>
+</resources>
